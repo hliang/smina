@@ -103,7 +103,7 @@ public:
 
 		if (!uncompressed_infile || !*this)
 		{
-			throw file_error(path(name), true);
+			throw file_error(name, true);
 		}
 
 		return true;
