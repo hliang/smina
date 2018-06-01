@@ -425,7 +425,7 @@ void main_procedure(model& m, precalculate& prec,
 	par.mc.hunt_cap = vec(10, 10, 10);
 	par.num_tasks = settings.exhaustiveness;
 	par.num_threads = settings.cpu;
-	par.display_progress = true;
+	par.display_progress = settings.verbosity > 1;
 
 	szv_grid_cache gridcache(m, prec.cutoff_sqr());
 	const fl slope = 1e6; // FIXME: too large? used to be 100
